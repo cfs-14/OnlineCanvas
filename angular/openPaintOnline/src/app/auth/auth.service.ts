@@ -14,8 +14,14 @@ export class AuthService {
     domain: AUTH_CONFIG.domain,
     responseType: 'token id_token',
     audience: `https://${AUTH_CONFIG.domain}/userinfo`,
-    // redirectUri: 'http://localhost:4200/callback',
-    redirectUri: 'http://ec2-54-153-76-219.us-west-1.compute.amazonaws.com/',
+
+
+    // development:
+    redirectUri: 'http://localhost:4200/callback',
+    //  production:
+    // redirectUri: 'http://ec2-54-153-76-219.us-west-1.compute.amazonaws.com/',
+
+
     scope: 'openid'
   });
 
